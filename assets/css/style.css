@@ -13,6 +13,7 @@ p {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
+	grid-auto-rows: 280px;
 }
 
 @media (min-width: 576px) {
@@ -35,13 +36,18 @@ p {
 
 @media (min-width: 1200px) {
 	.grid {
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(7, 1fr);
 	}
 }
 
 .grid main {
 	background-color: #fff;
 	grid-row: 1 / 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -56,21 +62,74 @@ p {
 	}
 }
 
-.grid div {
-	position: relative;
+
+/* Main content */
+
+.grid main header h1 {
+	font: 2.2rem/2.2 Open Sans;
 }
 
-.grid div::before {
-	content: "";
-	display: block;
-	padding-top: 100%;
+.grid main header h2 {
+	font: 1rem/1 Open Sans;
+	color: #b2b2b2;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
 }
 
-.grid div img {
-	position: absolute;
-	top: 0;
-	left: 0;
+.grid main .description p {
+	font: .8rem/1.2 Roboto;
+	color: #e47c7c;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+}
+
+.grid main footer h1 {
+	font: 600 1rem/1 Open Sans;
+	color: #333;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.grid main footer p {
+	font: 200 .8rem/1.2 Open Sans;
+	color: #333;
+	text-transform: uppercase;
+}
+
+
+/* Tiles */
+
+.tile {
+	cursor: pointer;
+	background-position: 50% 50%;
+}
+
+.tile>div:nth-child(1) {
+	opacity: 0;
 	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	background-color: #fff;
+	transition: opacity 100ms ease-in-out;
+}
+
+.tile>div:nth-child(1) h1 {
+	font: 800 1.2rem/1.4 Open Sans;
+	color: #000;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.tile>div:nth-child(1) h2 {
+	font: 300 1rem/1.4 Open Sans;
+	color: #e47c7c;
+	letter-spacing: 2px;
+	margin-bottom: 20%;
+	text-transform: uppercase;
+}
+
+.tile>div:nth-child(1):hover {
+	opacity: 1;
 }
