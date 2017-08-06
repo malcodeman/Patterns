@@ -13,6 +13,11 @@ function getPatterns() {
         '{"name":"Sakura","author":"Aslan Zamanloo", "url":"url(assets/images/backgrounds/sakura.png)" },' +
         '{"name":"Canvas Orange","author":"Raul Varela", "url":"url(assets/images/backgrounds/canvas-orange.jpg)" },' +
         '{"name":"Worms","author":"Tomislava Babić", "url":"url(assets/images/backgrounds/wormz.png)" },' +
+        '{"name":"Kiwis","author":"Natalia De Frutos", "url":"url(assets/images/backgrounds/kiwis.png)" },' +
+        '{"name":"Ocean","author":"Jon Vlasach", "url":"url(assets/images/backgrounds/ocean.jpg)" },' +
+        '{"name":"The Illusionist","author":"Henry Daubrez", "url":"url(assets/images/backgrounds/the-illusionist.png)" },' +
+        '{"name":"Wild Sea","author":"Henry Daubrez", "url":"url(assets/images/backgrounds/wild-sea.png)" },' +
+        '{"name":"White Wood","author":"Claudio Guglieri", "url":"url(assets/images/backgrounds/white-wood.jpg)" },' +
         '{"name":"Bicycles","author":"Shaun Fox", "url":"url(assets/images/backgrounds/bicycles.png)" }]}';
     return patterns;
 }
