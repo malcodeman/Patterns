@@ -14,12 +14,41 @@ function getPatterns() {
         '{"name":"Canvas Orange","author":"Raul Varela", "url":"url(assets/images/backgrounds/canvas-orange.jpg)" },' +
         '{"name":"Worms","author":"Tomislava Babić", "url":"url(assets/images/backgrounds/wormz.png)" },' +
         '{"name":"Kiwis","author":"Natalia De Frutos", "url":"url(assets/images/backgrounds/kiwis.png)" },' +
+        '{"name":"Graph Paper","author":"Tomislava Babić", "url":"url(assets/images/backgrounds/graph-paper.png)" },' +
         '{"name":"Ocean","author":"Jon Vlasach", "url":"url(assets/images/backgrounds/ocean.jpg)" },' +
         '{"name":"The Illusionist","author":"Henry Daubrez", "url":"url(assets/images/backgrounds/the-illusionist.png)" },' +
         '{"name":"Wild Sea","author":"Henry Daubrez", "url":"url(assets/images/backgrounds/wild-sea.png)" },' +
+        '{"name":"Seigaiha","author":"Olga Libby", "url":"url(assets/images/backgrounds/seigaiha.png)" },' +
         '{"name":"White Wood","author":"Claudio Guglieri", "url":"url(assets/images/backgrounds/white-wood.jpg)" },' +
+        '{"name":"Plaid","author":"Alexey Tretina", "url":"url(assets/images/backgrounds/plaid.jpg)" },' +
+        '{"name":"Kale Salad","author":"Claudio Guglieri", "url":"url(assets/images/backgrounds/kale-salad.jpg)" },' +
+        '{"name":"Doodles","author":"Nicole Bennett", "url":"url(assets/images/backgrounds/doodles.png)" },' +
+        '{"name":"Naranjas","author":"Natalia De Frutos", "url":"url(assets/images/backgrounds/naranjas.png)" },' +
         '{"name":"Bicycles","author":"Shaun Fox", "url":"url(assets/images/backgrounds/bicycles.png)" }]}';
     return patterns;
+}
+
+// Algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+function shuffleArray(originalArray) {
+    "use strict";
+    var counter, index, temp;
+    counter = originalArray.length;
+    while (counter) {
+        index = Math.floor(Math.random() * counter);
+        counter -= 1;
+        temp = originalArray[counter];
+        originalArray[counter] = originalArray[index];
+        originalArray[index] = temp;
+    }
+}
+
+function renderPatternsCounter() {
+    "use strict";
+    var counter, patterns;
+    counter = document.getElementById("patterns_counter");
+    patterns = JSON.parse(getPatterns());
+    counter.textContent = patterns.bg.length;
 }
 
 function populateGrid() {
@@ -27,8 +56,8 @@ function populateGrid() {
     var grid, patternsObject, i, tile;
     grid = document.getElementById("grid");
     patternsObject = JSON.parse(getPatterns());
-    i = 0;
-    for (i; i < patternsObject.bg.length; i += 1) {
+    shuffleArray(patternsObject.bg);
+    for (i = 0; i < patternsObject.bg.length; i += 1) {
         tile = document.createElement("div");
         tile.className = "tile";
         tile.style.backgroundImage = patternsObject.bg[i].url;
@@ -39,6 +68,7 @@ function populateGrid() {
 
 function main() {
     "use strict";
+    renderPatternsCounter();
     populateGrid();
 }
 main();
