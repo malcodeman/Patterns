@@ -23,12 +23,12 @@ p {
 
 .grid .main-tile {
 	background-color: #fff;
-	grid-row: 1 / 3;
 	display: flex;
 	flex-direction: column;
+	grid-row: 1 / 3;
 	justify-content: center;
-	text-align: center;
 	padding: 2rem;
+	text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -41,33 +41,33 @@ p {
 /* Main tile */
 
 .grid .main-tile header h1 {
-	font: 2.2rem/2.2 Open Sans;
+	font: 600 2.2rem/2.2 Rubik;
 }
 
 .grid .main-tile header h2 {
-	font: 1rem/1 Open Sans;
 	color: #b2b2b2;
+	font: 1rem/1 Rubik;
 	margin-bottom: 2rem;
 	text-transform: uppercase;
 }
 
 .grid .main-tile .description p {
-	font: .8rem/1.2 Roboto;
 	color: #e47c7c;
+	font: .8rem/1.2 Karla;
 	margin-bottom: 2rem;
 	text-transform: uppercase;
 }
 
 .grid .main-tile footer h1 {
-	font: 600 1rem/1 Open Sans;
 	color: #333;
+	font: 600 1rem/1 Rubik;
 	margin-bottom: 1rem;
 	text-transform: uppercase;
 }
 
 .grid .main-tile footer p {
-	font: 200 .8rem/1.2 Open Sans;
 	color: #333;
+	font: .8rem/1.2 Karla;
 	text-transform: uppercase;
 }
 
@@ -75,31 +75,31 @@ p {
 /* Tiles */
 
 .tile {
+	background-position: 50%;
 	cursor: pointer;
-	background-position: 50% 50%;
 }
 
 .tile>div:nth-child(1) {
-	opacity: 0;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
 	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	opacity: 0;
+	text-align: center;
 	transition: opacity 100ms ease-in-out;
 }
 
 .tile>div:nth-child(1) h1 {
-	font: 800 1.2rem/1.4 Open Sans;
 	color: #000;
+	font: 600 1.2rem/1.4 Rubik;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 .tile>div:nth-child(1) h2 {
-	font: 300 1rem/1.4 Open Sans;
 	color: #e47c7c;
+	font: 1rem/1.4 Rubik;
 	letter-spacing: 2px;
 	margin-bottom: 20%;
 	text-transform: uppercase;
