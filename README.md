@@ -10,4 +10,4 @@ Neat example of CSS Grid and collection of my favourite patterns.
 * [Rubik](https://fonts.google.com/specimen/Rubik)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
