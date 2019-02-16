@@ -1,5 +1,8 @@
 # Patterns 🏁
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/malcodeman/patterns/blob/master/LICENSE)
+
 Neat example of CSS Grid and collection of my favourite patterns.
 
 Thank to [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) layout system patterns are mobile ready and infinitely scalable.
